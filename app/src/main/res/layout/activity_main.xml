@@ -1,29 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
+    android:id="@+id/main"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
-
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="280dp"
+        android:background="@drawable/gradient_list"
+        >
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/design_default_color_primary_dark">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Placerholder Text"
-                android:textColor="@color/white"/>
-        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tvMainLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="Dhaka"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainTemp" />
+
+        <TextView
+            android:id="@+id/tvMainTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-thin"
+            android:text="25"
+            android:textSize="80sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDegreeSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="°"
+            android:textSize="80sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMainTemp"
+            app:layout_constraintStart_toEndOf="@+id/tvMainTemp"
+            app:layout_constraintTop_toTopOf="@+id/tvMainTemp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="126dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="126dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="15dp"
+                app:layout_constraintStart_toEndOf="@id/card1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="126dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="15dp"
+                app:layout_constraintStart_toEndOf="@id/card2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tableCard"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/card2"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Date"
+
+                                />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </TableLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
