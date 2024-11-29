@@ -27,15 +27,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <TextView
             android:id="@+id/tvMainLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dhaka"
-            app:layout_constraintBottom_toTopOf="@+id/tvMainTemp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentCondition" />
 
         <TextView
             android:id="@+id/tvMinTemp"
@@ -69,6 +69,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <ImageView
+            android:id="@+id/upperImageView"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/tvMainTemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/rain" />
 
         <TextView
             android:id="@+id/tvCurrentCondition"
@@ -475,6 +485,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/date1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -484,13 +495,14 @@
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/imageView"
+                                android:id="@+id/conditionImage1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/rain" />
 
                             <TextView
+                                android:id="@+id/min1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -500,6 +512,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/max1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -517,6 +530,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/date2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -526,13 +540,14 @@
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/imageView2"
+                                android:id="@+id/conditionImage2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/rain" />
 
                             <TextView
+                                android:id="@+id/min2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -542,6 +557,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/max2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -558,6 +574,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/date3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -567,13 +584,14 @@
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/imageView3"
+                                android:id="@+id/conditionImage3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/rain" />
 
                             <TextView
+                                android:id="@+id/min3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -583,6 +601,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/max3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -599,6 +618,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/date4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -608,13 +628,14 @@
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/imageView4"
+                                android:id="@+id/conditionImage4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/rain" />
 
                             <TextView
+                                android:id="@+id/min4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -624,6 +645,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/max4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -640,6 +662,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/date5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -649,13 +672,14 @@
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/imageView5"
+                                android:id="@+id/conditionImage5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/rain" />
 
                             <TextView
+                                android:id="@+id/min5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -665,6 +689,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/max5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -681,6 +706,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/date6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -690,13 +716,14 @@
                                 android:textSize="14sp" />
 
                             <ImageView
-                                android:id="@+id/imageView6"
+                                android:id="@+id/conditionImage6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/rain" />
 
                             <TextView
+                                android:id="@+id/min6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -706,6 +733,7 @@
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/max6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -735,6 +763,25 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorText"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="@string/something_went_wrong"
+        android:visibility="gone"/>
 
 
 
