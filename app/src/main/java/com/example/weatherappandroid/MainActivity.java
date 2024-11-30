@@ -195,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 tvMainTemp.setText(String.format("%s", Math.round(Double.parseDouble(currentConditions.getString("temp")))));
                 tvFeelsLike.setText(String.format("%s°", Math.round(Double.parseDouble(currentConditions.getString("feelslike")))));
                 tvHumidity.setText(String.format("%d%%", Math.round(Double.parseDouble(currentConditions.getString("humidity")))));
+                tvWindSpeed.setText(String.format("%s km/h", Math.round(Double.parseDouble(currentConditions.getString("windspeed")))));
                 tvChanceOfRain.setText(String.format("%d%%", Math.round(Double.parseDouble(currentConditions.getString("precipprob")))));
                 tvSunrise.setText(currentConditions.getString("sunrise").substring(0, 5));
                 tvSunset.setText(currentConditions.getString("sunset").substring(0, 5));
